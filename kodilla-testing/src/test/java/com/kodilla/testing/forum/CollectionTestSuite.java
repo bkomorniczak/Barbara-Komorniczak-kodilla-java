@@ -1,13 +1,23 @@
 package com.kodilla.testing.forum;
 
 import com.kodilla.testing.collection.OddNumbersExterminator;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 public class CollectionTestSuite {
 
+    @Before
+    public void before(){
+        System.out.println("Test Case: Start -OddNumbersExtermination");
+    }
+    @After
+    public void after(){
+        System.out.println("Test Case: End -OddNumbersExtermination");
+    }
     @Test
     public void testOddNumbersExterminatorEmptyList(){
         //Given
