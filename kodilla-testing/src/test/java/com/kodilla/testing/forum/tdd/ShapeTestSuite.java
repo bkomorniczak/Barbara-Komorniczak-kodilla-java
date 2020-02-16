@@ -2,10 +2,7 @@ package com.kodilla.testing.forum.tdd;
 
 import com.kodilla.testing.shape.*;
 import org.junit.*;
-import org.junit.contrib.java.lang.system.SystemOutRule;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 public class ShapeTestSuite {
     private static int testCounter = 0;
@@ -72,22 +69,5 @@ public class ShapeTestSuite {
         Assert.assertEquals(shape,result);
     }
 
-    @Rule
-    public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
-    @Test
-    public void testShowFigures(){
-        //Given
-        Shape shape = new Square("Iron Man",4);
-        Shape shape1 = new Triangle("Hawkeye", 2,3);
-        ShapeCollector shapeCollector = new ShapeCollector();
-        shapeCollector.addFigure(shape);
-        shapeCollector.addFigure(shape1);
 
-
-        //When
-        shapeCollector.showFigures();
-        Assert.assertEquals("Preparing to execute test #"+ testCounter+"\n"+"Iron Man\nHawkeye\n", systemOutRule.getLog());
-
-
-    }
 }
