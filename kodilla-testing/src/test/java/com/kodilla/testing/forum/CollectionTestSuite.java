@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CollectionTestSuite {
 
@@ -23,7 +24,7 @@ public class CollectionTestSuite {
         //Given
         ArrayList<Integer> numbers = new ArrayList <>();
         //When
-       ArrayList nulllist = OddNumbersExterminator.exterminate(numbers);
+       List nulllist = OddNumbersExterminator.exterminate(numbers);
         //Then
         Assert.assertEquals(nulllist.isEmpty(), true);
     }
@@ -31,7 +32,7 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorNormalList(){
         //Given
-        ArrayList<Integer> numbers = new ArrayList <>();
+        List<Integer> numbers = new ArrayList <>();
         //When
         numbers.add(1);
         numbers.add(2);
@@ -51,7 +52,7 @@ public class CollectionTestSuite {
         evenList.add(8);
         evenList.add(10);
 
-        ArrayList<Integer> exterminatedList = OddNumbersExterminator.exterminate(numbers);
+        List<Integer> exterminatedList = OddNumbersExterminator.exterminate(numbers);
         //Then
         Assert.assertEquals(numbers,evenList);
     }
