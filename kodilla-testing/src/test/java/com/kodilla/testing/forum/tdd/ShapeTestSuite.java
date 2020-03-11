@@ -46,7 +46,7 @@ public class ShapeTestSuite {
         Assert.assertTrue(result);
     }
 
-    @Test
+ /*   @Test
     public void testRemoveNonExistingFigure(){
         //Given
         Shape shape = new Circle("Black Widow", 3);
@@ -55,7 +55,7 @@ public class ShapeTestSuite {
         boolean result = shapeCollector.removeFigure(shape);
         //
         Assert.assertFalse(result);
-    }
+    }*/
 
     @Test
     public void testGetFigure(){
