@@ -54,7 +54,7 @@ public class CollectionTestSuite {
 
         List<Integer> exterminatedList = OddNumbersExterminator.exterminate(numbers);
         //Then
-        Assert.assertEquals(numbers,evenList);
+        Assert.assertEquals(evenList,exterminatedList);
     }
 
 
