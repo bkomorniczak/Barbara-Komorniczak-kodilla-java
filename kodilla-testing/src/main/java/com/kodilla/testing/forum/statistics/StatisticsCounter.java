@@ -1,9 +1,9 @@
 package com.kodilla.testing.forum.statistics;
 
 public class StatisticsCounter {
-    private double usersNumber;
-    private double postsNumber;
-    private double commentsNumber;
+    private int usersNumber;
+    private int postsNumber;
+    private int commentsNumber;
     private double avrPostNumbPerUser;
     private double avrCommentNumbPerUser;
     private double avrCommentNumbPerPost;
@@ -28,10 +28,10 @@ public class StatisticsCounter {
         }else {
             postsNumber = statistics.postsCount();
             commentsNumber = statistics.commentsCount();
-            avrPostNumbPerUser = postsNumber / usersNumber;
-            avrCommentNumbPerUser = commentsNumber / usersNumber;
+            avrPostNumbPerUser = (double) postsNumber / usersNumber;
+            avrCommentNumbPerUser = (double)commentsNumber / usersNumber;
             if (postsNumber > 0) {
-                avrCommentNumbPerPost = commentsNumber / postsNumber;
+                avrCommentNumbPerPost = (double)commentsNumber / postsNumber;
             } else {
                 System.out.println("Brak postów");
             }
