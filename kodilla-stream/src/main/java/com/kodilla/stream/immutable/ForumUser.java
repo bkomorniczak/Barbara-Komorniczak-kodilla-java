@@ -1,4 +1,4 @@
-package com.kodilla.immutable;
+package com.kodilla.stream.immutable;
 
 
 
