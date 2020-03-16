@@ -52,7 +52,7 @@ public class StatisticsTestSuite {
 
     }
 
-    @Test
+  /*  @Test
     public void calculateAdvStatisticsTestForNot0Value(){
         //Given
         Statistics statisticsMock = mock(Statistics.class);
@@ -75,7 +75,7 @@ public class StatisticsTestSuite {
         Assert.assertEquals(10, statisticsCounter.getAvrCommentNumbPerUser() );
         Assert.assertEquals(10, statisticsCounter.getAvrPostNumbPerUser() );
 
-    }
+    }*/
 
     @Test
     public void calculateAdvStatisticsTestWhenMoreCommentsThenPosts(){
