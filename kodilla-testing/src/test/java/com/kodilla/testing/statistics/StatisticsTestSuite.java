@@ -13,6 +13,8 @@ import static org.mockito.Mockito.when;
 
 public class StatisticsTestSuite {
 
+    private static final double DELTA = 1e-15;
+
     @Test
     public void calculateAdvStatisticsTestFor0Users(){
         //Given
@@ -91,14 +93,13 @@ public class StatisticsTestSuite {
         //When
         StatisticsCounter statisticsCounter = new StatisticsCounter();
         statisticsCounter.calculateAdvStatistics(statisticsMock);
-        final double DELTA = 1e-15;
 
         Assert.assertEquals(1000, statisticsMock.commentsCount());
         Assert.assertEquals(10, statisticsMock.postsCount());
-        Assert.assertEquals(100, statisticsCounter.getAvrCommentNumbPerPost(),DELTA );
-        Assert.assertEquals(0.1, statisticsCounter.getAvrPostNumbPerUser(), DELTA );
-        Assert.assertEquals(10.0, statisticsCounter.getAvrCommentNumbPerUser(),DELTA );
-        Assert.assertEquals(0.1, statisticsCounter.getAvrPostNumbPerUser(),DELTA );
+        Assert.assertEquals(100, statisticsCounter.getAvrCommentNumbPerPost(), DELTA);
+        Assert.assertEquals(0.1, statisticsCounter.getAvrPostNumbPerUser(), DELTA);
+        Assert.assertEquals(10.0, statisticsCounter.getAvrCommentNumbPerUser(), DELTA);
+        Assert.assertEquals(0.1, statisticsCounter.getAvrPostNumbPerUser(), DELTA);
 
     }
     @Test
