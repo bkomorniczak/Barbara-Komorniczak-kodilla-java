@@ -4,9 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
-import java.util.List;
+import java.util.*;
 
 public class WorldTestSuite {
 
@@ -26,31 +24,31 @@ public class WorldTestSuite {
         Country country9 = new Country("Libia", new BigDecimal("1"));
 
 
-        List<Country>asianList = new ArrayList <>();
-        asianList.add(country1);
-        asianList.add(country2);
-        asianList.add(country3);
+        Set<Country> asianSet = new HashSet <>();
+        asianSet.add(country1);
+        asianSet.add(country2);
+        asianSet.add(country3);
 
-        List<Country>europeanList = new ArrayList <>();
-        europeanList.add(country4);
-        europeanList.add(country5);
-        europeanList.add(country6);
+        Set<Country>europeanSet =  new HashSet <>();
+        europeanSet.add(country4);
+        europeanSet.add(country5);
+        europeanSet.add(country6);
 
-        List<Country>africanList = new ArrayList <>();
-        africanList.add(country7);
-        africanList.add(country8);
-        africanList.add(country9);
+        Set<Country> africanSet = new  HashSet <>();
+        africanSet.add(country7);
+        africanSet.add(country8);
+        africanSet.add(country9);
 
-        Continent asia = new Continent(asianList);
-        Continent europe = new Continent(europeanList);
-        Continent africa = new Continent(africanList);
+        Continent asia = new Continent(asianSet);
+        Continent europe = new Continent(europeanSet);
+        Continent africa = new Continent(africanSet);
 
-        List<Continent> worldList = new ArrayList <>();
-        worldList.add(asia);
-        worldList.add(europe);
-        worldList.add(africa);
+        Set<Continent> worldSet = new HashSet <>();
+        worldSet.add(asia);
+        worldSet.add(europe);
+        worldSet.add(africa);
 
-        World world = new World(worldList);
+        World world = new World(worldSet);
         BigDecimal allPeople = world.getPeopleQuantity();
 
         Assert.assertEquals(new BigDecimal("8"),allPeople);

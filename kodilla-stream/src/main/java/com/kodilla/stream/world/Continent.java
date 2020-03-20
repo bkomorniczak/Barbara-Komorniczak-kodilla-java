@@ -1,20 +1,18 @@
 package com.kodilla.stream.world;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 public class Continent {
 
-    private final List<Country> countries;
+    private final Set<Country> countries;
 
-    public Continent(final List<Country> countries){
+    public Continent(final Set<Country> countries){
         this.countries = countries;
-
     }
 
 
 
-    public List<Country> getCountries(){
-        return countries;
+    public Set<Country> getCountries(){
+        return  countries;
     }
 }
