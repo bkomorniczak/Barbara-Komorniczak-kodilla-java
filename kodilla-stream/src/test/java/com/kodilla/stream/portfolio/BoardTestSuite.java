@@ -140,7 +140,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskListAverageWorkingOnTak(){
+    public void testAddTaskListAverageWorkingOnTask(){
         //Given
         Board project = prepareTestData();
 
@@ -148,14 +148,16 @@ public class BoardTestSuite {
         List<TaskList> inProgressTasks = new ArrayList <>();
         inProgressTasks.add(new TaskList("In progress"));
 
-        OptionalDouble averageDurationInProgress = project.getTaskLists().stream()
+        double averageDurationInProgress = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(taskList -> taskList.getTasks().stream())
                 .map(task -> task.getCreated())
                 .mapToDouble(creationDate -> DAYS.between(creationDate,LocalDate.now()))
-                .average();
+                .average().getAsDouble();
 
         //then
-        Assert.assertEquals(10,averageDurationInProgress);
+        Assert.assertEquals(10,averageDurationInProgress, 0);
     }
+
+
 }
