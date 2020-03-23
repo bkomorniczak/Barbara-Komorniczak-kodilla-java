@@ -14,9 +14,9 @@ public class FlightFinder {
             throw new RouteNotFoundException();
         }else{
             if(airporstsMap.get(flight.getArrivalAirport())){
-                System.out.println("From: " + flight.getDepartureAirport() + "to: " + flight.getArrivalAirport() + "is available");
+                System.out.println("From: " + flight.getDepartureAirport() + " to: " + flight.getArrivalAirport() + " is available");
             }else {
-                System.out.println("From: " + flight.getDepartureAirport() + "to: " + flight.getArrivalAirport() + "is not available");
+                throw new RouteNotFoundException();
             }
         }
     }
