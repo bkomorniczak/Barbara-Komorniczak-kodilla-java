@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MovieStore {
-    public static Map<String, List<String>> getMovies() {
+    public  Map<String, List<String>> getMovies() {
 
         List<String> ironManTranslations = new ArrayList<>();
         ironManTranslations.add("Żelazny Człowiek");
@@ -33,7 +33,8 @@ public class MovieStore {
 
     public static void main(String[] args) {
 
-        String titlesSeparated = MovieStore.getMovies().entrySet().stream()
+        MovieStore movieStore = new MovieStore();
+        String titlesSeparated = movieStore.getMovies().entrySet().stream()
                 .flatMap(entry -> entry.getValue().stream())
                 .collect(Collectors.joining("!", "", ""));
 
