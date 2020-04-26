@@ -1,7 +1,3 @@
-package com.kodilla.good.patterns.challenges;
-
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
