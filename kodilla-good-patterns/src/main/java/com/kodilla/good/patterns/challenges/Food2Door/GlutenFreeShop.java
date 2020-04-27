@@ -4,7 +4,7 @@ public class GlutenFreeShop implements FoodShop {
     private String name = " GlutenFreeShop";
 
     @Override
-    public boolean process() {
+    public boolean process(Item item) {
         System.out.println("GlutenFreeShop welcomes you!");
         return true;
     }

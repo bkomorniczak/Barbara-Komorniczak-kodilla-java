@@ -4,7 +4,7 @@ public class ExtraFoodShop implements FoodShop{
 
     private String name;
     @Override
-    public boolean process() {
+    public boolean process(Item item) {
         System.out.println("ExtraFoodShop extra welcome you!");
 
         return true;

@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.challenges.Food2Door;
 public class HealthyShop implements FoodShop {
     private String name = "HealthyShop";
     @Override
-    public boolean process() {
+    public boolean process(Item item) {
         System.out.println("Welcome to my HealthyShop!");
 
         return true;
