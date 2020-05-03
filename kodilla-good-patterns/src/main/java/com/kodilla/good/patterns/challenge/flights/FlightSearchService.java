@@ -17,12 +17,13 @@ public class FlightSearchService {
                 .forEach(System.out::println);
     }
 
-    public void findFlightWithTransferIn(Flight flight, Map<Integer,Flight> mapOfAvailableAirports){
+    public void findFlightWithTransferIn(String transferAirport, Map<Integer,Flight> mapOfAvailableAirports){
 
-        System.out.println("With transfer in: " + flight.getIntermediateAirport());
+        System.out.println("With transfer in: " + transferAirport);
 
         mapOfAvailableAirports.entrySet().stream()
-                .filter(entry->entry.getValue().equals(flight))
+                .filter(entry->entry.getValue().getIntermediateAirport().equals(transferAirport))
                 .forEach(System.out::println);
+
     }
 }
