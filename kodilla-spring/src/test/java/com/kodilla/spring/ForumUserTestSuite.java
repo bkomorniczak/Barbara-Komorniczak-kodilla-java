@@ -1,7 +1,6 @@
 package com.kodilla.spring;
 
 import com.kodilla.spring.forum.ForumUser;
-import javafx.application.Application;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
