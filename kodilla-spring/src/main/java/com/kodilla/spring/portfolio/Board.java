@@ -1,7 +1,6 @@
 package com.kodilla.spring.portfolio;
 
 
-import org.springframework.context.annotation.Bean;
 
 public class Board {
     private TaskList toDoList;
