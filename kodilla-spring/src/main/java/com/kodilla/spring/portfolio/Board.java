@@ -1,5 +1,6 @@
 package com.kodilla.spring.portfolio;
 
+
 import org.springframework.context.annotation.Bean;
 
 public class Board {
@@ -13,8 +14,6 @@ public class Board {
         this.inProgressList = inProgressList;
         this.doneList = doneList;
     }
-
-
 
     public TaskList getToDoList() {
         return toDoList;

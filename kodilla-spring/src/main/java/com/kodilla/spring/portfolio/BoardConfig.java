@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BoardConfig {
 
+
     TaskList toDoList;
     TaskList inProgressList;
     TaskList doneList;
