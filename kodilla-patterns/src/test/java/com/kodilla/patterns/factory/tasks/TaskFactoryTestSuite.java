@@ -1,6 +1,5 @@
 package com.kodilla.patterns.factory.tasks;
 
-import javafx.beans.binding.When;
 import org.junit.Assert;
 import org.junit.Test;
 
