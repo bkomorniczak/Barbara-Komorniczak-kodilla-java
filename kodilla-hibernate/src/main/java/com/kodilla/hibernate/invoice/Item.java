@@ -72,7 +72,7 @@ public class Item {
     public void setValue(BigDecimal value) {
         this.value = value;
     }
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "INVOICE_ID")
     public Invoice getInvoice(){
         return invoice;

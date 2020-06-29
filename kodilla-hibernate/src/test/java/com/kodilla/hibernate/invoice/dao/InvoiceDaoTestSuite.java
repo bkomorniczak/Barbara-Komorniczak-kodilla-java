@@ -9,9 +9,11 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class InvoiceDaoTestSuite {
@@ -54,14 +56,15 @@ public class InvoiceDaoTestSuite {
         Assert.assertEquals(2, productDao.count());
         Assert.assertEquals(2, itemDao.count());
         Assert.assertNotEquals(0,id);
-        Assert.assertEquals(2, invoice.getItems().size());
+        Invoice actualInvoice = invoiceDao.findById(id).get();
+        Assert.assertEquals(2, actualInvoice.getItems().size());
 
         try {
             productDao.deleteAll();
             itemDao.deleteAll();
             invoiceDao.deleteAll();
         } catch (Exception e) {
-            //do nothing
+            e.printStackTrace();
         }
     }
 
