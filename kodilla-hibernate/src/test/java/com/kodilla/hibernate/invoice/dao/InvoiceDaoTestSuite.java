@@ -54,6 +54,7 @@ public class InvoiceDaoTestSuite {
         Assert.assertEquals(2, productDao.count());
         Assert.assertEquals(2, itemDao.count());
         Assert.assertNotEquals(0,id);
+        Assert.assertEquals(2, invoice.getItems().size());
 
         try {
             productDao.deleteAll();
